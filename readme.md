@@ -17,7 +17,7 @@ parser.export('output_filename.txt')
 to export your highlights and notes. More improvements are to be made, and I welcome and appreciate contributions.
 
 ### Example (English)
-
+```plain text
 Man's Search for Meaning (Viktor Frankl)
 - Your Highlight on Location 79-82 | Added on Monday, March 29, 2021 12:39:51 AM
 
@@ -28,9 +28,10 @@ Man's Search for Meaning (Viktor Frankl)
 
 Yooo this is the gold 
 ==========
+```
 
 ### Example (Chinese)
-
+```plain text
 The Power of Moments (Chip Heath;Dan Heath)
 - 您在位置 #2984-2990的标注 | 添加于 2020年3月17日星期二 下午1:32:49
 
@@ -42,3 +43,4 @@ The Power of Moments (Chip Heath;Dan Heath)
 
 Such good advice!!!
 ==========
+```
