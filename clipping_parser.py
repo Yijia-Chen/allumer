@@ -59,7 +59,7 @@ class ClippingParser(object):
             books = sorted(list(self.books.values()), key=lambda b: b.datetime, reverse=True)
 
             for b in books:
-                f.write(repr(b) + '\n========\n\n')
+                f.write('### ' + repr(b) + '\n\n')
 
     def parse(self, f_in_name: str = 'My Clippings.txt') -> Dict[str, Book]:
         with open(f_in_name, 'r+') as f:
