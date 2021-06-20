@@ -117,17 +117,21 @@ class ClippingParser(object):
 
         for br in breaks:
             author = str[last_break:br]
-            comma_index = author.find(',')
-
-            if comma_index > 0:
-                authors.append(author[comma_index+2:] + ' ' + author[:comma_index])
-            else:
-                authors.append(author)
+            authors.append(self.get_author(author))
 
             last_break = br + 1
 
+        author = str[last_break:]
+        authors.append(self.get_author(author))
+
         return authors
 
+    def get_author(self, str: str) -> str:
+        comma_index = str.find(',')
+
+        # invert first and last name if needed
+        return str[comma_index+2:] + ' ' + str[:comma_index] if comma_index > 0 else str
+    
     def get_mode(self, str: str) -> bool:
         return 'Note' in str or '笔记' in str 
 
